@@ -21,7 +21,7 @@ export class ScannerPage implements OnInit {
   selectedImage: any ='';
   imageText: any = '';
   progress: number = 0;
-  googleCloudVisionAPIKey='AIzaSyA3DxPp7XEXfQNanBNanegt2eyXida-9WU';
+  googleCloudVisionAPIKey='GooglevisionApiKEy';
   imageText1: any;
   selectedImage1: any='';
   showimage=true
