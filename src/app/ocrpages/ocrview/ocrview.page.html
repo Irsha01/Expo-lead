@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon expand="full" slot="start" name="arrow-back" class="topicons"  (click)="openhome()"></ion-icon>
+    <ion-title>
+    {{exponame}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="updaterow" >
+
+    <div class="showimage" (click)="openImageModal()">
+      <ion-icon name="resize" class="resizeimage"></ion-icon>
+      <img [src]="viewimg" *ngIf="viewimg"  class="viewimage">
+    </div>
+    <!-- <ion-textarea [(ngModel)]="viewtext" 
+    fill="outline"  class="textrea2" [readonly]="true"></ion-textarea> -->
+    <div class="textdiv" >
+      <p class="headtext">Caption Text</p>
+    <p class="viewtext">{{viewtext}}</p>
+  </div>
+  <div class="textdiv" >
+    <p class="headtext">Sales Comments</p>
+    <p class="viewtext">{{salescomment}}</p>
+  </div>
+  
+  
+  
+  
+  
+  </div>
+</ion-content>
+<ion-footer >
+  <ion-toolbar class="footerrow">
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button >
+      <ion-icon name="copy" (click)="copyToClipboard(viewtext)" color=""></ion-icon>
+      Copy
+    </ion-tab-button>
+    <ion-tab-button >
+      <ion-icon expand="full" name="share-social" (click)="shareText(viewtext)" color=""></ion-icon>
+      Share
+    </ion-tab-button>
+    <ion-tab-button>
+      <ion-icon name="create" (click)="opendetails(view)" color=""></ion-icon>
+      Edit
+    </ion-tab-button>
+    <ion-tab-button >
+      <ion-icon name="trash" (click)="confirmDelete(viewid)" color="danger"></ion-icon>
+      Delete
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+</ion-toolbar>
+</ion-footer>

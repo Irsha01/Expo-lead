@@ -1,0 +1,7 @@
+{
+  "name": "ocrscanner",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

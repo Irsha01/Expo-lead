@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon expand="full" slot="start" name="arrow-back" class="topicons"  (click)="openhome()"></ion-icon>
+    <ion-title>
+      {{exponame}} </ion-title>
+      <ion-icon expand="full" slot="end" name="checkmark" class="topicons saveicon"  (click)="UpdateChanges(objid,objtext)"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="editrow">
+    <ion-label position="floating">Caption Text</ion-label>
+    <ion-textarea [(ngModel)]="objtext" 
+    fill="outline"  class="textrea1"></ion-textarea>
+   
+    <ion-label position="floating">Sales Comments</ion-label>
+    <ion-textarea [(ngModel)]="salescomment" 
+    fill="outline"  class="textrea1"></ion-textarea>
+ 
+      
+  
+  </div>
+</ion-content>

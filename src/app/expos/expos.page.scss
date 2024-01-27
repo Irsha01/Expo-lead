@@ -1,0 +1,105 @@
+
+ion-content{
+    //background:#ddd;
+    --background:#e7f0fe;
+  }
+
+.newicon{
+    font-size: 24px;
+    margin: 0px 5px;
+   // background-color: #064094;
+  }
+
+
+
+  
+ion-item{
+  border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 8px 4px;
+    --background: #fff;
+   // padding: 10px 0px;
+
+}
+ion-list ion-item:nth-child(even){
+ 
+    --background: #afd0ff;
+   // padding: 10px 0px;
+
+}
+
+  .detailstext{
+    //white-space: break-spaces;
+    width: 100%;
+    white-space: initial;
+  }
+
+  
+.listitem{
+  margin-bottom: 60px;
+  background: transparent;
+  }
+  
+  .listitem ion-icon{
+    color: #034391 !important;
+    margin: 2px 0;
+    font-size: 20px;
+    
+  }
+
+  .iconsdiv{
+    // width: calc(100% - 100px);
+    text-align: right;
+  }
+
+  .iconsdiv{
+    margin-left: 5px;
+    ion-icon{
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+
+
+  ion-fab {
+    position: fixed;
+    ion-button{
+      --background: #064094;
+    }
+  }
+  
+
+  .timelot{
+    // color: #bfbfbf;
+       font-size: 14px !important;
+       margin-bottom: 0px;
+       margin-top: 0;
+   }
+   .typheading{
+     font-weight: 700;
+     margin-bottom: 8px;
+   }
+
+   /* Style for the ion-icon */
+.calendaricon {
+  /* Add your icon styles here, such as color, size, etc. */
+  color: #064094; /* Example color */
+  font-size: 1.5em; /* Example font size */
+}
+
+/* Style for the p element with class timelot */
+p.timelot1 {
+  display: flex; /* Align children in the same line */
+  align-items: center; /* Center vertically */
+  font-size: 14px !important;
+  margin-bottom: 0px;
+  margin-top: 0;
+  line-height: 2rem;
+}
+
+/* Style for the span */
+p.timelot1 span {
+  /* Add your span styles here */
+  margin-left: 5px; /* Example margin */
+ // font-weight: bold; /* Example font weight */
+}

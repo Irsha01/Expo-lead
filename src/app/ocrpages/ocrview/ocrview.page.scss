@@ -1,0 +1,79 @@
+.updaterow{
+    float: left;
+    position: relative;
+    // padding: 0 10px;
+  }
+  .showimage{
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    width: 80px;
+  }
+  .resizeimage{
+    color: white;
+    font-size: 22px;
+    position: absolute;
+    bottom: 10px;
+    background: rgb(0,0,0,0.2);
+    right: 0px;
+    padding: 5px;
+    border-radius: 50%;
+  
+  }
+
+  .viewimage{
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    margin-top: 10px;
+    border: 2px solid #064094;
+  }
+  .viewtext{
+    padding: 5px;
+    line-height: 1.5;
+  }
+.headtext{
+  font-weight: bold;
+  padding: 0px 5px;
+}
+  ion-footer{
+    .footerrow{
+      --background: #064094;
+      padding-bottom: 5px;
+    }
+    ion-tab-button{
+      --background: #064094;
+      color: #fff;
+    }
+    ion-tab-bar{
+      --background: #064094;
+    }
+    ion-icon{
+      background: #fff !important;
+      border-radius: 50%;
+      padding: 5px;
+      color: #034391 ;
+      font-size: 20px;
+    
+    }
+  
+  }
+  .textdiv{
+    border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 8px 4px;
+      --background: #fff;
+     // padding: 10px 0px;
+  
+  }
+
+  .topicons{
+    font-size: 24px;
+  }
+  .saveicon{
+    background: #ffffff;
+      color:#064094;
+      padding: 5px;
+      border-radius: 30px;
+  
+  }

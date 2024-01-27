@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon routerLink="/home" name="arrow-back-outline" slot="start">Scanner page</ion-icon>
+      
+    </ion-buttons>
+    <ion-title>
+      {{exponame}}
+      </ion-title>
+      <ion-buttons slot="end">
+         
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+
+
+
+   
+ 
+
+
+ <div *ngIf="selectedImage">
+  <div class="showimage" (click)="openImageModal()">
+    <ion-icon name="resize" class="resizeimage"></ion-icon>
+    <img [src]="selectedImage" *ngIf="selectedImage"  class="viewimage">
+  </div>
+ 
+
+  <div  class="newtexts">
+      <p >
+          Result
+      </p>
+      <div >
+        <ion-textarea [(ngModel)]="imageText" 
+  fill="outline"  class="textrea1"></ion-textarea>
+  <ion-label position="floating">Sales Comments</ion-label>
+  <ion-textarea [(ngModel)]="salescomment" 
+  fill="outline"  class="textrea1"></ion-textarea>
+       
+      </div>
+    </div>
+  <div style="text-align: center;">
+    <ion-button (click)="SaveChanges()">Save</ion-button> 
+    </div>
+</div>
+  
+</ion-content>

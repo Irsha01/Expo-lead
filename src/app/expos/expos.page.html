@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Expo Lead Capture </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <!-- <ion-button expand="block" (click)="presentAlert()">Open Form Alert</ion-button> -->
+
+  <ion-list class="listitem">
+    <ion-item *ngFor="let item of items" lines="none" >
+     
+      
+      <!-- <ion-thumbnail slot="start">
+        <img [src]="item.image" class="detailimage" (click)="navigateToViewPage(item)">
+      </ion-thumbnail> -->
+      <div  class="detailstext">
+        <div (click)="navigateToEdit(item)">
+        <p class="typheading">{{item.exponame}}</p>
+        <p class="timelot" >{{item.expodetails }}</p>
+      </div>
+        <p class="timelot1" >  <ion-icon name="calendar-outline" class="calendaricon"></ion-icon><span> {{item.startdate}} - {{item.enddate}}</span></p>
+          <div class="iconsdiv"> 
+            <ion-icon expand="full" name="create" (click)="presentAlert(item)" color=""></ion-icon> 
+            <ion-icon expand="full" name="trash" class="trashdel" (click)="confirmDelete(item.id)" color="danger"></ion-icon> 
+             
+          </div> 
+      </div>
+    
+    
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+ 
+    <ion-button   (click)="presentAlert()"><span class="newicon"> + </span> New</ion-button>
+  </ion-fab>
+
+</ion-content>

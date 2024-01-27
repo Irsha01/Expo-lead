@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon routerLink="/expos" name="home" slot="start">Scanner page</ion-icon>
+    </ion-buttons>
+    <ion-title>Expo Lead Capture</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+
+  <div class="form-container" >
+ 
+  
+    <!-- <div class="background"></div> -->
+  <form [formGroup]="userDetailsForm" (ngSubmit)="submitForm()">
+    <ion-item lines="none">
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input formControlName="firstName" type="text"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input formControlName="lastName" type="text"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="!userDetailsForm.valid" shape="round">Submit</ion-button>
+  </form>
+</div>
+
+</ion-content>

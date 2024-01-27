@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon routerLink="/expos" name="arrow-back-outline" slot="start">Scanner page</ion-icon>
+    </ion-buttons>
+    <ion-title>
+     {{exponame}}
+    </ion-title>
+    
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+
+<div >
+
+  <ion-list class="listitem">
+    <ion-item *ngFor="let item of items" lines="none">
+     
+      
+      <ion-thumbnail slot="start">
+        <img [src]="item.image" class="detailimage" (click)="navigateToViewPage(item)">
+      </ion-thumbnail>
+      <div  class="detailstext">
+        <!-- <h2>{{item.uuid}}</h2> -->
+        <p class="typheading" (click)="navigateToViewPage(item)">{{item.result | truncate: 20: '...'}}</p>
+        <p class="timelot" (click)="navigateToViewPage(item)">{{item.timemodified}}</p>
+          <div class="iconsdiv">
+            <ion-icon expand="full" name="copy" (click)="copyToClipboard(item.result)" color=""></ion-icon>
+            <ion-icon expand="full" name="share-social" (click)="shareText(item.result)" color=""></ion-icon> 
+             
+            <ion-icon expand="full" name="create" (click)="navigateToEdit(item)" color=""></ion-icon> 
+            <ion-icon expand="full" name="trash" class="trashdel" (click)="confirmDelete(item.id)" color="danger"></ion-icon> 
+             
+          </div> 
+    
+       
+      </div>
+    
+    
+    </ion-item>
+  </ion-list>
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+ 
+    <ion-button  routerLink="/scanner" [queryParams]="{ id: expoid,name:exponame }"><span class="newicon"> + </span> New</ion-button>
+  </ion-fab>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>

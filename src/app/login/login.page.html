@@ -1,0 +1,40 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      OCR Scanner 
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="login-page" padding>
+<div *ngIf="checklogin"></div>
+
+<div class="wapper" *ngIf="!checklogin">
+  <div class="logintop">
+    <h2 style="text-align: center;">Welcome !</h2>
+    <p>Expo Lead Capture</p>
+  </div>
+  
+  <div class="form-container" >
+ 
+  
+    <!-- <div class="background"></div> -->
+  <form [formGroup]="userDetailsForm" (ngSubmit)="submitForm()">
+    <ion-item lines="none">
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input formControlName="firstName" type="text"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input formControlName="lastName" type="text"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="!userDetailsForm.valid" shape="round">Submit</ion-button>
+  </form>
+</div>
+</div>
+</ion-content>
